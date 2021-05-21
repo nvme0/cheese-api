@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+#
+# Lerna
+#
+lerna-debug.log
+
+packages/api/lib*
+packages/app/build
+packages/app/build.zip
+
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# testing
+packages/app/coverage
+
+# misc
+.DS_Store
+.env*
+!.env.example
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Except the ESLint config file
+!.eslintrc.js
