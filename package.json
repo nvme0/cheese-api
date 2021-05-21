@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "deploy": "lerna run deploy",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "type-check": "lerna run type-check",
+    "eslint": "lerna run eslint"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
