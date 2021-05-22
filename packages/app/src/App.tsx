@@ -8,6 +8,8 @@ import theme from "@app/theme";
 
 import "./styles.scss";
 
+import HomePage from "@pages/home";
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -17,7 +19,7 @@ const App = () => {
       <SnackbarProvider maxSnack={3} dense>
         <SnackbarUtilsConfigurator />
         <QueryClientProvider client={queryClient}>
-          <p>Hello, World!</p>
+          <HomePage />
         </QueryClientProvider>
       </SnackbarProvider>
     </ThemeProvider>
