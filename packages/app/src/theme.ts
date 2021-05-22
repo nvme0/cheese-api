@@ -1,19 +1,14 @@
 import { Theme, createMuiTheme } from "@material-ui/core/styles";
 
-// based off https://uxdesign.cc/refining-a-color-palette-for-dark-mode-1a8bb78e7338
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#008ab0",
+      main: "#f4d75e",
     },
     secondary: {
-      main: "#c47062",
+      main: "#e9723d",
     },
-    type: "dark",
-    background: {
-      default: "#0d1e24",
-      paper: "#0d262f",
-    },
+    type: "light",
   },
 });
 
