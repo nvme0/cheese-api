@@ -88,6 +88,7 @@ export default {
     "^@templates(.*)$": "<rootDir>/components/templates$1",
     "^@pages(.*)$": "<rootDir>/pages$1",
     "^@utils(.*)$": "<rootDir>/utils$1",
+    "^@hooks(.*)$": "<rootDir>/hooks$1",
     "^@app(.*)$": "<rootDir>$1",
   },
 

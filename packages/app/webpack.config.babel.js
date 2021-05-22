@@ -65,6 +65,7 @@ module.exports = () => {
     "@templates": path.resolve(__dirname, "src/components/templates"),
     "@pages": path.resolve(__dirname, "src/pages"),
     "@utils": path.resolve(__dirname, "src/utils"),
+    "@hooks": path.resolve(__dirname, "src/hooks"),
     "@app": path.resolve(__dirname, "src"),
   };
 

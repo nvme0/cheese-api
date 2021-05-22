@@ -24,6 +24,7 @@
       "@templates/*": ["src/components/templates/*"],
       "@pages/*": ["src/pages/*"],
       "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@app/*": ["src/*"]
     }
   },

@@ -4,6 +4,13 @@ A small POC of the Cheeseria Frontend & API showing CRUD capabilities that displ
 
 ## Technologies Used
 
+### Frontend
+
+- React
+- Jest & React Testing Library
+- TypeScript
+- eslint & prettier
+
 ### Backend
 
 - NodeJS & Express
@@ -13,6 +20,10 @@ A small POC of the Cheeseria Frontend & API showing CRUD capabilities that displ
 - eslint & prettier
 
 ## Packages
+
+### app
+
+A ReactJS frontend for the Cheeseria POC. For more information see the [App Package](/packages/app)
 
 ### api
 

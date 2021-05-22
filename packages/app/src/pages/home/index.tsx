@@ -2,12 +2,15 @@ import React from "react";
 
 import AppTemplate from "@templates/AppTemplate";
 import CheeseCards from "@organisms/CheeseCards";
-import cheeses from "@app/__MOCKS__/cheeses";
+import CircularProgressCentered from "@molecules/CircularProgressCentered";
+import useCheeses from "@hooks/useCheeses";
 
 const HomePage = () => {
+  const { isLoading, data } = useCheeses();
+  const cheeses = data || [];
   return (
     <AppTemplate>
-      <CheeseCards cheeses={cheeses} />
+      {isLoading ? <CircularProgressCentered message="loading..." /> : <CheeseCards cheeses={cheeses} />}
     </AppTemplate>
   );
 };
