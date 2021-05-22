@@ -4,11 +4,11 @@ import { AppBar, Toolbar } from "@material-ui/core";
 import useStyles from "./styles";
 
 export interface Props {
-  content: JSX.Element;
+  children: JSX.Element;
 }
 
 const HomeTemplate = (props: Props) => {
-  const { content } = props;
+  const { children } = props;
   const classes = useStyles();
 
   return (
@@ -16,7 +16,7 @@ const HomeTemplate = (props: Props) => {
       <AppBar position="relative" className={classes.appBar} color="primary" elevation={0}>
         <Toolbar className={classes.toolbar}></Toolbar>
       </AppBar>
-      <main className={classes.main}>{content}</main>
+      <main className={classes.main}>{children}</main>
     </div>
   );
 };
