@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "004e908b-7ae6-466d-b6e4-07cb71760212",
+		"name": "Cheese API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cheeseApiUrl}}/api/v1/cheeses/c56777da-0d78-4bad-ad35-57c546ce6387",
+					"host": [
+						"{{cheeseApiUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cheeses",
+						"c56777da-0d78-4bad-ad35-57c546ce6387"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cheeseApiUrl}}/api/v1/cheeses",
+					"host": [
+						"{{cheeseApiUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cheeses"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cheeseApiUrl",
+			"value": "localhost:8080"
+		}
+	]
+}

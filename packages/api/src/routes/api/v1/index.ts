@@ -1,7 +1,7 @@
 import { Router } from "express";
-import v1 from "./api/v1";
+import cheeses from "./cheeses";
 
 const router = Router();
-router.use("/api/v1", v1);
+router.use("/cheeses", cheeses);
 
 export default router;

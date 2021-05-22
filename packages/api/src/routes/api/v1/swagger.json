@@ -1,0 +1,84 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Cheese API",
+    "version": "1.0.0",
+    "description": "The API for the cheeseria POC"
+  },
+  "tags": [
+    {
+      "name": "cheeses",
+      "description": "Everything about our cheeses"
+    }
+  ],
+  "paths": {
+    "/api/v1/cheeses": {
+      "get": {
+        "summary": "List all cheeses",
+        "operationId": "listCheeses",
+        "tags": ["cheeses"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/cheese"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cheeses/{cheeseId}": {
+      "get": {
+        "summary": "Find cheese by Id",
+        "operationId": "getCheese",
+        "tags": ["cheeses"],
+        "parameters": [
+          {
+            "name": "cheeseId",
+            "in": "path",
+            "description": "Id of the cheese that needs to be fetched",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/cheese"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Cheese not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "cheese": {
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "color": { "type": "string" },
+          "pricePerKilo": { "type": "number" }
+        }
+      }
+    }
+  }
+}
