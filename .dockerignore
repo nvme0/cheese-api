@@ -9,6 +9,7 @@ lerna-debug.log
 
 # Artifacts that will be built during image creation
 packages/api/lib*
+packages/api/build*
 packages/app/build*
 packages/app/build.zip
 

@@ -8,7 +8,8 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "type-check": "lerna run type-check",
-    "eslint": "lerna run eslint"
+    "eslint": "lerna run eslint",
+    "copy-app": "cp -i -R ./packages/app/build ./packages/api/build"
   },
   "devDependencies": {
     "lerna": "^3.22.1"

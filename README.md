@@ -2,6 +2,8 @@
 
 A small POC of the Cheeseria Frontend & API showing CRUD capabilities that displays cheeses with pictures, price-per-kilo, and the cheese color.
 
+To view the deployed application go to [https://cheese-api-qongoxjguq-de.a.run.app](https://cheese-api-qongoxjguq-de.a.run.app).
+
 ## Technologies Used
 
 ### Frontend
@@ -18,6 +20,11 @@ A small POC of the Cheeseria Frontend & API showing CRUD capabilities that displ
 - Swagger
 - TypeScript
 - eslint & prettier
+
+### DevOps
+
+- Docker multi-stage build
+- GitHub Actions
 
 ## Setup
 

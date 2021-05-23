@@ -15,10 +15,6 @@ COPY . .
 RUN npm ci
 RUN npm run bootstrap:ci
 
-RUN ls -a
-RUN ls -a packages/api
-RUN ls -a packages/app
-
 #
 # Lint
 #
@@ -52,10 +48,13 @@ RUN echo "Running build stage..."
 RUN npm run build
 
 #
-# Start API
+# Final
 #
 
-FROM build as start-api
-RUN echo "Running start-api stage..."
-COPY --from=build /usr/src/packages/api .
+FROM build as final
+RUN echo "Running final stage..."
+RUN npm run copy-app
+RUN ls -a
+RUN ls -a packages/app
+RUN ls -a packages/api
 CMD npm start

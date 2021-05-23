@@ -1,4 +1,5 @@
-import express, { json } from "express";
+import express, { json, static as serveStatic } from "express";
+import path from "path";
 import cors from "cors";
 import * as swaggerUI from "swagger-ui-express";
 import * as dotenv from "dotenv";
@@ -23,6 +24,7 @@ app.use(
   }),
 );
 app.use(json());
+app.use(serveStatic(path.join(__dirname, "..", "build")));
 app.use("/", routes);
 app.use("/docs/api/v1", swaggerUI.serve, swaggerUI.setup(swaggerDocumentV1));
 
