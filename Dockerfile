@@ -4,7 +4,7 @@
 
 FROM node:12-alpine as base
 RUN echo "Setting up base image..."
-WORKDIR /
+WORKDIR /usr/src
 
 COPY package.json lerna.json package-lock.json ./
 COPY packages/api/package*.json ./packages/api/
