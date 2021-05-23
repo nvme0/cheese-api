@@ -19,6 +19,11 @@ A small POC of the Cheeseria Frontend & API showing CRUD capabilities that displ
 - TypeScript
 - eslint & prettier
 
+## Setup
+
+1. `npm i`
+2. `npm run bootstrap`
+
 ## Packages
 
 ### app

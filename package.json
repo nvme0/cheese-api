@@ -2,6 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "bootstrap:ci": "lerna bootstrap --ci",
     "deploy": "lerna run deploy",
     "build": "lerna run build",
     "test": "lerna run test",
