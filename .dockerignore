@@ -1,0 +1,27 @@
+node_modules
+packages/api/node_modules
+packages/app/node_modules
+
+#
+# Lerna
+#
+lerna-debug.log
+
+# Artifacts that will be built during image creation
+packages/api/lib*
+packages/app/build*
+packages/app/build.zip
+
+# testing
+packages/app/coverage
+
+#
+# misc
+#
+.DS_Store
+
+npm-debug.log*
+
+.dockerignore
+.gitignore
+.git

@@ -1,0 +1,30 @@
+name: CI Master
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Create api .env file
+        run: |
+          touch packages/api/.env
+          echo "${{ secrets.ENV_API }}" >> packages/api/.env
+
+      - name: Create app .env file
+        run: |
+          touch packages/app/.env
+          echo "${{ secrets.ENV_APP }}" >> packages/app/.env
+
+      - name: Run CI Pipeline
+        uses: docker/build-push-action@2
+        with:
+          push: false
+          target: build
+          tags: cheese-api-ci
