@@ -4,7 +4,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "bootstrap:ci": "lerna bootstrap --ci",
-    "deploy": "lerna run deploy",
+    "start": "lerna run start --scope=api",
     "build": "lerna run build",
     "test": "lerna run test",
     "type-check": "lerna run type-check",

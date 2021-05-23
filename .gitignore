@@ -6,9 +6,9 @@
 lerna-debug.log
 
 packages/api/lib*
+packages/api/build
 packages/app/build
 packages/app/build.zip
-
 
 # dependencies
 node_modules
@@ -26,6 +26,8 @@ packages/app/coverage
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+service-account-key.json
 
 # Except the ESLint config file
 !.eslintrc.js

@@ -50,3 +50,12 @@ RUN npm run test
 FROM base as build
 RUN echo "Running build stage..."
 RUN npm run build
+
+#
+# Start API
+#
+
+FROM build as start-api
+RUN echo "Running start-api stage..."
+COPY --from=build /usr/src/packages/api .
+CMD npm start
