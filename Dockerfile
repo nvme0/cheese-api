@@ -51,10 +51,14 @@ RUN npm run build
 # Final
 #
 
+# TODO optimize final docker build
 FROM build as final
 RUN echo "Running final stage..."
 RUN npm run copy-app
+
+# DEBUG
 RUN ls -a
 RUN ls -a packages/app
 RUN ls -a packages/api
+
 CMD npm start

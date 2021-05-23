@@ -12,6 +12,7 @@ router.get("/:id", (req, res) => {
     params: { id },
   } = req;
 
+  // TODO Add persistence mechanism
   const requestedCheese = cheeses.find((cheese) => cheese.id === id);
   if (requestedCheese) {
     res.send(requestedCheese);
@@ -19,5 +20,11 @@ router.get("/:id", (req, res) => {
     res.sendStatus(404);
   }
 });
+
+// TODO Add POST (create cheese)
+
+// TODO Add PUT (update cheese)
+
+// TODO Add DELETE (delete cheese)
 
 export default router;
